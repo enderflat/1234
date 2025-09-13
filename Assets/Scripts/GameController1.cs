@@ -77,8 +77,8 @@ public class GameController1 : MonoBehaviour
 
         float flapspeed = (VerticalSpeed > 0) ? 30 : 5;
         float angle = Mathf.Sin(Time.time * flapspeed) * 45;
-        WingsLeft.transform.localRotation = Quaternion.Euler(Vector3.left * angle);
-        WingsRight.transform.localRotation = Quaternion.Euler(Vector3.right * angle);
+        WingsLeft.transform.localRotation = Quaternion.Euler(Vector3.forward * angle);
+        WingsRight.transform.localRotation = Quaternion.Euler(Vector3.back * angle);
 
         foreach (Transform pipe in PipesHolder.transform)
         {
